@@ -1,12 +1,36 @@
+import { useEffect, useState } from "react";
 export default function Portfolio() {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const moveCursor = (e) => {
+      setPosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", moveCursor);
+
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-black text-yellow-50 font-sans overflow-x-hidden cursor-none relative">
       {/* Batman Cursor */}
-      <div className="fixed inset-0 pointer-events-none z-[9999] flex items-center justify-center">
-        <div className="w-8 h-8 rounded-full border-2 border-yellow-400 animate-pulse shadow-[0_0_20px_rgba(250,204,21,0.8)] flex items-center justify-center text-yellow-400 text-xs font-bold">
-          🦇
-        </div>
-      </div>
+     <div
+  className="fixed pointer-events-none z-[9999] transition-transform duration-75"
+  style={{
+    left: `${position.x}px`,
+    top: `${position.y}px`,
+    transform: "translate(-50%, -50%)",
+  }}
+>
+  <div className="w-10 h-10 rounded-full border-2 border-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.9)] flex items-center justify-center text-yellow-400 text-sm bg-black/40 backdrop-blur-md">
+    🦇
+  </div>
+</div>
 
       {/* Gotham Background */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center animate-[zoom_20s_linear_infinite]"></div>
