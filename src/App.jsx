@@ -178,36 +178,41 @@ export default function Portfolio() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="max-w-6xl mx-auto px-6 py-24 border-t border-yellow-500/10">
-        <h2 className="text-4xl font-bold mb-12 text-yellow-400">Contact</h2>
+      <section
+  id="contact"
+  className="max-w-6xl mx-auto px-6 py-24 border-t border-yellow-500/10"
+>
+  <h2 className="text-4xl font-bold mb-12 text-yellow-400">
+    Contact
+  </h2>
 
-        <div className="bg-neutral-950 border border-yellow-500/10 rounded-3xl p-10 text-center shadow-2xl">
-          <h3 className="text-3xl font-bold mb-4">
-            Welcome To Gotham.
-          </h3>
+  <div className="bg-neutral-950 border border-yellow-500/10 rounded-3xl p-10 text-center shadow-2xl">
+    <h3 className="text-3xl font-bold mb-4">
+      Welcome To Gotham.
+    </h3>
 
-          <p className="text-gray-400 mb-10 text-lg">
-            Open for internships, collaborations, and futuristic projects.
-          </p>
+    <p className="text-gray-400 mb-10 text-lg">
+      Open for internships, collaborations, and futuristic projects.
+    </p>
 
-          <a
-             href="/resume.pdf"
-             download
-             className="px-8 py-4 rounded-2xl border border-yellow-400 hover:bg-yellow-500/10 transition-all duration-300 font-semibold"
-            >
-             Download Resume
-           </a>
-            <a
-              href="mailto:zaid.yusuf226@gmail.com"
-              className="px-8 py-4 rounded-2xl bg-yellow-400 text-black hover:bg-yellow-300 transition-all duration-300 font-bold shadow-lg shadow-yellow-500/20"
-            >
-              Email Me
-            </a>
-          </div>
-        </div>
-      </section>
+    <div className="flex flex-wrap justify-center gap-5">
+      <a
+        href="/resume.pdf"
+        download
+        className="px-8 py-4 rounded-2xl border border-yellow-400 hover:bg-yellow-500/10 transition-all duration-300 font-semibold"
+      >
+        Download Resume
+      </a>
 
-      {/* Footer */}
+      <a
+        href="mailto:zaid.yusuf226@gmail.com"
+        className="px-8 py-4 rounded-2xl bg-yellow-400 text-black hover:bg-yellow-300 transition-all duration-300 font-bold shadow-lg shadow-yellow-500/20"
+      >
+        Email Me
+      </a>
+    </div>
+  </div>
+</section>
       <footer className="border-t border-yellow-500/10 py-10 text-center text-gray-500 text-sm">
         © 2026 Yusuf Zaid • Gotham Portfolio
       </footer>
