@@ -109,9 +109,11 @@ export default function Portfolio() {
           <div className="relative animate-[float_4s_ease-in-out_infinite]">
             <div className="absolute inset-0 rounded-full bg-yellow-500 blur-3xl opacity-20 scale-110"></div>
 
-            <div className="w-[320px] h-[320px] md:w-[420px] md:h-[420px] rounded-full border-4 border-yellow-400 bg-neutral-950 flex items-center justify-center text-7xl shadow-2xl shadow-yellow-500/20 overflow-hidden">
-              🦇
-            </div>
+           <img
+             src="/profile.jpg"
+             alt="Yusuf Zaid"
+             className="w-[320px] h-[320px] md:w-[420px] md:h-[420px] object-cover rounded-full border-4 border-yellow-400 shadow-2xl shadow-yellow-500/20"
+          />
           </div>
         </div>
       </section>
@@ -188,7 +190,13 @@ export default function Portfolio() {
             Open for internships, collaborations, and futuristic projects.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-5">
+          <a
+             href="/resume.pdf"
+             download
+             className="px-8 py-4 rounded-2xl border border-yellow-400 hover:bg-yellow-500/10 transition-all duration-300 font-semibold"
+            >
+             Download Resume
+           </a>
             <a
               href="mailto:zaid.yusuf226@gmail.com"
               className="px-8 py-4 rounded-2xl bg-yellow-400 text-black hover:bg-yellow-300 transition-all duration-300 font-bold shadow-lg shadow-yellow-500/20"
